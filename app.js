@@ -12,7 +12,7 @@ app.use(express.static("public"));
 
 app.set("view engine", "ejs");
 
-console.log(process.env.URL);
+
 mongoose.connect(process.env.URL);
 
 // Schemas and models
@@ -97,7 +97,7 @@ app.post("/", function (req, res) {
 });
 
 app.post("/delete",function(req,res){
-    console.log(req.body);
+    // console.log(req.body);
 
     const day = _.startCase(_.toLower(date.getDate()));
     
